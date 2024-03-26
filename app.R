@@ -33,8 +33,8 @@ ui <- page_navbar(title = 'Species dsitribution model',
   nav_panel('Paired species',
             layout_sidebar(
               sidebar=sidebar(width = 300,
-                fileInput('file2_1','Species_1'),
-                fileInput('file2_2','Species_2'),
+                fileInput('file2_1','Consumer_species'),
+                fileInput('file2_2','Resources_species'),
                 radioButtons('future_paired',label='Type',
                                    choices=c('Current climate data'=FALSE,'Future climate data'=TRUE),
                                    selected = FALSE,inline = TRUE),
@@ -47,7 +47,7 @@ ui <- page_navbar(title = 'Species dsitribution model',
             ))
 )
 
-
+options(shiny.maxRequestSize=30*1024^2)
 server <- function(input, output, session) {
   output$sample_data <- downloadHandler(
     filename = function() {

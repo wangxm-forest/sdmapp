@@ -105,7 +105,7 @@ paired_prediction<-function(species1.data,species2.data,
   plot(wrld_simpl, xlim = c(xmin, xmax), ylim = c(ymin, ymax), add = TRUE, border = "gray10", col = NA)
   
   # Add the legend
-  legend("topright", legend = c("Species_1", "Species_2", "Both"), fill = plot.colors[2:4], bg = "#FFFFFF")
+  legend("topright", legend = c("Consumer_species", "Resources_species", "Both"), fill = plot.colors[2:4], bg = "#FFFFFF")
   
   # Add bounding box around map
   box()
