@@ -10,6 +10,7 @@ This is a shiny app developed to run SDM with current and future climate data fo
 + maptools
 ## Structure
 + data:
+
   You should download your data from iNaturalist, more details can be found in jcoliver's lesson listed above.
   + file1_1.csv: the file will be used for single species modeling and forecasting in the App (will be rewritten by the uploaded file)
   + file2_1.csv: the file will be used for paired species modeling and forecasting in the App (will be rewritten by the uploaded file)
