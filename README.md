@@ -20,3 +20,6 @@ This is a shiny app developed to run SDM with current and future climate data fo
 + app.R: code for running the Shiny app. You can test it in R, but you need to publish it before other people can get access to it. Go to https://www.shinyapps.io/ to publish it. You might want to make sure it is always in the running status during the group project period.
 + Species distribution model_update.R: I put all the code for sdm analysis in biodiversity-sdm-lesson into one script for easily transfering to Shiny code
 + code.R: analysis code I actually used in the Shiny App
+
+## Potential issues you might encounter
+See wiki for solutions
