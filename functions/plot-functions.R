@@ -30,9 +30,14 @@ single_prediction<-function(prepared.data,
   # Load in data for map borders
   data(wrld_simpl)
   
+  # Load in the species name
+  
+  d<-read.csv("data/MY_SPECIES.csv")
+  species<-d$scientific_name[1]
+  
   # Draw the base map
   plot(wrld_simpl, xlim = c(xmin, xmax), ylim = c(ymin, ymax), axes = TRUE, col = "gray95", 
-       main = paste0(gsub(pattern = "_", replacement = " ", x = outprefix), 
+       main = paste(species, 
                      ifelse(future," - future"," - current")))
   
   # Add the model rasters
@@ -104,8 +109,15 @@ paired_prediction<-function(species1.data,species2.data,
   # Redraw the borders of the base map
   plot(wrld_simpl, xlim = c(xmin, xmax), ylim = c(ymin, ymax), add = TRUE, border = "gray10", col = NA)
   
+  # Load in the species names
+  
+  d1<-read.csv("data/file2_1.csv")
+  species1<-d1$scientific_name[1]
+  d2<-read.csv("data/file2_2.csv")
+  species2<-d2$scientific_name[1]
+  
   # Add the legend
-  legend("topright", legend = c("Consumer_species", "Resources_species", "Both"), fill = plot.colors[2:4], bg = "#FFFFFF")
+  legend("topright", legend = c(species1, species2, "Both"), fill = plot.colors[2:4], bg = "#FFFFFF")
   
   # Add bounding box around map
   box()

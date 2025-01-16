@@ -38,9 +38,14 @@ pdf(file = plot.file, useDingbats = FALSE)
 # Load in data for map borders
 data(wrld_simpl)
 
+# Load in the species name
+
+d<-read.csv("data/MY_SPECIES.csv")
+species<-d$scientific_name[1]
+
 # Draw the base map
 plot(wrld_simpl, xlim = c(xmin, xmax), ylim = c(ymin, ymax), axes = TRUE, col = "gray95", 
-     main = paste0(gsub(pattern = "_", replacement = " ", x = outprefix), " - current"))
+     main = paste(species," - current"))
 
 # Add the model rasters
 plot(sdm.raster, legend = FALSE, add = TRUE)
@@ -242,8 +247,15 @@ plot(combined.raster, legend = FALSE, add = TRUE, breaks = breakpoints, col = pl
 # Redraw the borders of the base map
 plot(wrld_simpl, xlim = c(xmin, xmax), ylim = c(ymin, ymax), add = TRUE, border = "gray10", col = NA)
 
+# Load in the species names
+
+d1<-read.csv("data/SPECIES1_DATA.csv")
+species1<-d1$scientific_name[1]
+d2<-read.csv("data/SPECIES2_DATA.csv")
+species2<-d2$scientific_name[1]
+
 # Add the legend
-legend("topright", legend = c("Species_1", "Species_2", "Both"), fill = plot.colors[2:4], bg = "#FFFFFF")
+legend("topright", legend = c(species1, species2, "Both"), fill = plot.colors[2:4], bg = "#FFFFFF")
 
 # Add bounding box around map
 box()
