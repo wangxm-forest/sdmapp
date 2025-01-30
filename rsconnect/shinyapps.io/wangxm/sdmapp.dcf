@@ -5,7 +5,7 @@ account: wangxm
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 10717873
-bundleId: 8402142
+bundleId: 9658776
 url: https://wangxm.shinyapps.io/sdmapp/
 version: 1
 asMultiple: FALSE
