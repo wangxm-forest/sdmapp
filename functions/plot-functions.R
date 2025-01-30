@@ -32,7 +32,7 @@ single_prediction<-function(prepared.data,
   
   # Load in the species name
   
-  d<-read.csv("data/MY_SPECIES.csv")
+  d<-read.csv("data/file1_1.csv")
   species<-d$scientific_name[1]
   
   # Draw the base map
