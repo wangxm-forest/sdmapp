@@ -13,7 +13,7 @@ source(file = "functions/plot-functions.R")
 
 sample_data <- read.csv("data/MY_SPECIES.csv",stringsAsFactors = F,sep=',')
 
-ui <- page_navbar(title = 'Species dsitribution model',
+ui <- page_navbar(title = 'Species distribution model',
                   header=useShinyjs(),
   nav_panel('Single species',
             layout_sidebar(
